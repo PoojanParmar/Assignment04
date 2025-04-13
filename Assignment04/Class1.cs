@@ -33,10 +33,11 @@ public class Assignment04Test
     public void insuraneQuote1()
     {
         
+        //Arrange
         driver.Navigate().GoToUrl("http://localhost/prog8170a04/getQuote.html");
         driver.Manage().Window.Size = new System.Drawing.Size(1550, 838);
 
-        
+        //Act
         driver.FindElement(By.Id("firstName")).Click();
         driver.FindElement(By.Id("firstName")).SendKeys("Poojan");
         driver.FindElement(By.Id("lastName")).SendKeys("Parmar");
@@ -51,7 +52,7 @@ public class Assignment04Test
         driver.FindElement(By.Id("btnSubmit")).Click();
         {
 
-            
+            //Assert
             string value = driver.FindElement(By.Id("finalQuote")).GetAttribute("value");
             Assert.That(value, Is.EqualTo("$5500"));
         }
@@ -60,11 +61,11 @@ public class Assignment04Test
     public void insuraneQuote2()
     {
 
-        
+        //Arrange
         driver.Navigate().GoToUrl("http://localhost/prog8170a04/getQuote.html");
         driver.Manage().Window.Size = new System.Drawing.Size(1535, 824);
 
-
+        //Act
         driver.FindElement(By.Id("firstName")).Click();
         driver.FindElement(By.Id("firstName")).SendKeys("Poojan");
         driver.FindElement(By.Id("lastName")).SendKeys("Parmar");
@@ -78,6 +79,8 @@ public class Assignment04Test
         driver.FindElement(By.Id("accidents")).SendKeys("4");
         driver.FindElement(By.Id("btnSubmit")).Click();
         {
+
+            //Assert
             string value = driver.FindElement(By.Id("finalQuote")).GetAttribute("value");
             Assert.That(value, Is.EqualTo("No Insurance for you!!  Too many accidents - go take a course!"));
         }
@@ -87,8 +90,12 @@ public class Assignment04Test
     [Test]
     public void insuraneQuote3()
     {
+
+        //Arrange
         driver.Navigate().GoToUrl("http://localhost/prog8170a04/getQuote.html");
         driver.Manage().Window.Size = new System.Drawing.Size(1535, 824);
+
+        //Act
         driver.FindElement(By.Id("firstName")).Click();
         driver.FindElement(By.Id("firstName")).SendKeys("Poojan");
         driver.FindElement(By.Id("lastName")).SendKeys("Parmar");
@@ -102,6 +109,8 @@ public class Assignment04Test
         driver.FindElement(By.Id("accidents")).SendKeys("2");
         driver.FindElement(By.Id("btnSubmit")).Click();
         {
+
+            //Assert
             string value = driver.FindElement(By.Id("finalQuote")).GetAttribute("value");
             Assert.That(value, Is.EqualTo("$3905"));
         }
@@ -109,8 +118,12 @@ public class Assignment04Test
     [Test]
     public void insuraneQuote4()
     {
+
+        //Arrange
         driver.Navigate().GoToUrl("http://localhost/prog8170a04/getQuote.html");
         driver.Manage().Window.Size = new System.Drawing.Size(1535, 824);
+
+        //Act
         driver.FindElement(By.Id("firstName")).Click();
         driver.FindElement(By.Id("firstName")).SendKeys("Poojan");
         driver.FindElement(By.Id("lastName")).SendKeys("Parmar");
@@ -126,6 +139,8 @@ public class Assignment04Test
         driver.FindElement(By.Id("phone-error")).Click();
         driver.FindElement(By.Id("phone-error")).Click();
         {
+
+            
             var element = driver.FindElement(By.Id("phone-error"));
             Actions builder = new Actions(driver);
             builder.DoubleClick(element).Perform();
@@ -134,6 +149,8 @@ public class Assignment04Test
         driver.FindElement(By.Id("phone-error")).Click();
         driver.FindElement(By.Id("phone-error")).Click();
         {
+
+            //Assert
             var element = driver.FindElement(By.Id("phone-error"));
             Actions builder = new Actions(driver);
             builder.DoubleClick(element).Perform();
@@ -144,8 +161,12 @@ public class Assignment04Test
     [Test]
     public void insuraneQuote5()
     {
+
+        //Arrange
         driver.Navigate().GoToUrl("http://localhost/prog8170a04/getQuote.html");
         driver.Manage().Window.Size = new System.Drawing.Size(1535, 824);
+
+        //Act
         driver.FindElement(By.Id("firstName")).Click();
         driver.FindElement(By.Id("firstName")).SendKeys("Poojan");
         driver.FindElement(By.Id("lastName")).SendKeys("Parmar");
@@ -210,6 +231,8 @@ public class Assignment04Test
         driver.FindElement(By.Id("email-error")).Click();
         driver.FindElement(By.Id("email-error")).Click();
         {
+
+            //Assert
             var element = driver.FindElement(By.Id("email-error"));
             Actions builder = new Actions(driver);
             builder.DoubleClick(element).Perform();
@@ -220,8 +243,12 @@ public class Assignment04Test
     [Test]
     public void insuraneQuote6()
     {
+
+        //Arrange
         driver.Navigate().GoToUrl("http://localhost/prog8170a04/getQuote.html");
         driver.Manage().Window.Size = new System.Drawing.Size(1535, 824);
+
+        //Act
         driver.FindElement(By.Id("firstName")).Click();
         driver.FindElement(By.Id("firstName")).SendKeys("Poojan");
         driver.FindElement(By.Id("lastName")).SendKeys("Parmar");
@@ -237,6 +264,8 @@ public class Assignment04Test
         driver.FindElement(By.Id("postalCode-error")).Click();
         driver.FindElement(By.Id("postalCode-error")).Click();
         {
+
+            //Assert
             var element = driver.FindElement(By.Id("postalCode-error"));
             Actions builder = new Actions(driver);
             builder.DoubleClick(element).Perform();
@@ -247,8 +276,12 @@ public class Assignment04Test
     [Test]
     public void insuraneQuote7()
     {
+
+        //Arrange
         driver.Navigate().GoToUrl("http://localhost/prog8170a04/getQuote.html");
         driver.Manage().Window.Size = new System.Drawing.Size(1535, 824);
+
+        //Act
         driver.FindElement(By.Id("firstName")).Click();
         driver.FindElement(By.Id("firstName")).SendKeys("Poojan");
         driver.FindElement(By.Id("lastName")).SendKeys("Parmar");
@@ -263,6 +296,8 @@ public class Assignment04Test
         driver.FindElement(By.Id("age-error")).Click();
         driver.FindElement(By.Id("age-error")).Click();
         {
+
+            //Assert
             var element = driver.FindElement(By.Id("age-error"));
             Actions builder = new Actions(driver);
             builder.DoubleClick(element).Perform();
@@ -273,8 +308,12 @@ public class Assignment04Test
     [Test]
     public void insuraneQuote8()
     {
+
+        //Arrange
         driver.Navigate().GoToUrl("http://localhost/prog8170a04/getQuote.html");
         driver.Manage().Window.Size = new System.Drawing.Size(1535, 824);
+
+        //Act
         driver.FindElement(By.Id("firstName")).Click();
         driver.FindElement(By.Id("firstName")).SendKeys("Poojan");
         driver.FindElement(By.Id("lastName")).SendKeys("Parmar");
@@ -292,6 +331,8 @@ public class Assignment04Test
         driver.FindElement(By.Id("accidents-error")).Click();
         driver.FindElement(By.Id("accidents-error")).Click();
         {
+
+            //Assert
             var element = driver.FindElement(By.Id("accidents-error"));
             Actions builder = new Actions(driver);
             builder.DoubleClick(element).Perform();
@@ -302,8 +343,12 @@ public class Assignment04Test
     [Test]
     public void insuraneQuote9()
     {
+
+        //Arrange
         driver.Navigate().GoToUrl("http://localhost/prog8170a04/getQuote.html");
         driver.Manage().Window.Size = new System.Drawing.Size(1535, 824);
+
+        //Act
         driver.FindElement(By.Id("firstName")).Click();
         driver.FindElement(By.Id("firstName")).SendKeys("Poojan");
         driver.FindElement(By.Id("lastName")).SendKeys("Parmar");
@@ -318,6 +363,8 @@ public class Assignment04Test
         driver.FindElement(By.Id("experience-error")).Click();
         driver.FindElement(By.Id("experience-error")).Click();
         {
+
+            //Assert
             var element = driver.FindElement(By.Id("experience-error"));
             Actions builder = new Actions(driver);
             builder.DoubleClick(element).Perform();
@@ -328,8 +375,12 @@ public class Assignment04Test
     [Test]
     public void insuraneQuote10()
     {
+
+        //Arrange
         driver.Navigate().GoToUrl("http://localhost/prog8170a04/getQuote.html");
         driver.Manage().Window.Size = new System.Drawing.Size(1535, 824);
+
+        //Act
         driver.FindElement(By.Id("firstName")).Click();
         driver.FindElement(By.Id("firstName")).SendKeys("Poojan");
         driver.FindElement(By.Id("address")).SendKeys("34 weber");
@@ -372,6 +423,8 @@ public class Assignment04Test
         driver.FindElement(By.Id("lastName-error")).Click();
         driver.FindElement(By.Id("lastName-error")).Click();
         {
+
+            //Assert
             var element = driver.FindElement(By.Id("lastName-error"));
             Actions builder = new Actions(driver);
             builder.DoubleClick(element).Perform();
@@ -382,8 +435,12 @@ public class Assignment04Test
     [Test]
     public void insuraneQuote11()
     {
+
+        //Arrange
         driver.Navigate().GoToUrl("http://localhost/prog8170a04/getQuote.html");
         driver.Manage().Window.Size = new System.Drawing.Size(1535, 824);
+
+        //Act
         driver.FindElement(By.Id("firstName")).Click();
         driver.FindElement(By.Id("firstName")).SendKeys("Poojan");
         driver.FindElement(By.Id("lastName")).SendKeys("Parmar");
@@ -402,6 +459,8 @@ public class Assignment04Test
         driver.FindElement(By.Id("age-error")).Click();
         driver.FindElement(By.Id("age-error")).Click();
         {
+
+            //Assert
             var element = driver.FindElement(By.Id("age-error"));
             Actions builder = new Actions(driver);
             builder.DoubleClick(element).Perform();
@@ -412,8 +471,12 @@ public class Assignment04Test
     [Test]
     public void insuraneQuote12()
     {
+
+        //Arrange
         driver.Navigate().GoToUrl("http://localhost/prog8170a04/getQuote.html");
         driver.Manage().Window.Size = new System.Drawing.Size(1535, 824);
+
+        //Act
         driver.FindElement(By.Id("firstName")).Click();
         driver.FindElement(By.Id("firstName")).SendKeys("Poojan");
         driver.FindElement(By.Id("lastName")).SendKeys("Parmar");
@@ -429,6 +492,8 @@ public class Assignment04Test
         driver.FindElement(By.Id("phone-error")).Click();
         driver.FindElement(By.Id("phone-error")).Click();
         {
+
+            //Assert
             var element = driver.FindElement(By.Id("phone-error"));
             Actions builder = new Actions(driver);
             builder.DoubleClick(element).Perform();
@@ -439,8 +504,12 @@ public class Assignment04Test
     [Test]
     public void insuraneQuote13()
     {
+
+        //Arrange
         driver.Navigate().GoToUrl("http://localhost/prog8170a04/getQuote.html");
         driver.Manage().Window.Size = new System.Drawing.Size(1535, 824);
+
+        //Act
         driver.FindElement(By.Id("firstName")).Click();
         driver.FindElement(By.Id("firstName")).SendKeys("Poojan");
         driver.FindElement(By.Id("lastName")).SendKeys("Parmar");
@@ -455,6 +524,8 @@ public class Assignment04Test
         driver.FindElement(By.Id("accidents")).SendKeys("21");
         driver.FindElement(By.Id("btnSubmit")).Click();
         {
+
+            //Assert
             string value = driver.FindElement(By.Id("finalQuote")).GetAttribute("value");
             Assert.That(value, Is.EqualTo("No Insurance for you!!  Too many accidents - go take a course!"));
         }
@@ -462,8 +533,12 @@ public class Assignment04Test
     [Test]
     public void insuraneQuote14()
     {
+
+        //Arrange
         driver.Navigate().GoToUrl("http://localhost/prog8170a04/getQuote.html");
         driver.Manage().Window.Size = new System.Drawing.Size(1535, 824);
+
+        //Act
         driver.FindElement(By.Id("firstName")).Click();
         driver.FindElement(By.Id("firstName")).SendKeys("Poojan");
         driver.FindElement(By.Id("lastName")).SendKeys("Parmar");
@@ -483,6 +558,8 @@ public class Assignment04Test
         driver.FindElement(By.Id("city-error")).Click();
         driver.FindElement(By.Id("city-error")).Click();
         {
+
+            
             var element = driver.FindElement(By.Id("city-error"));
             Actions builder = new Actions(driver);
             builder.DoubleClick(element).Perform();
@@ -498,6 +575,8 @@ public class Assignment04Test
         driver.FindElement(By.Id("city-error")).Click();
         driver.FindElement(By.Id("city-error")).Click();
         {
+
+            //Assert
             var element = driver.FindElement(By.Id("city-error"));
             Actions builder = new Actions(driver);
             builder.DoubleClick(element).Perform();
@@ -508,8 +587,12 @@ public class Assignment04Test
     [Test]
     public void insuraneQuote15()
     {
+
+        //Arrange
         driver.Navigate().GoToUrl("http://localhost/prog8170a04/getQuote.html");
         driver.Manage().Window.Size = new System.Drawing.Size(1535, 824);
+
+        //Act
         driver.FindElement(By.Id("firstName")).Click();
         driver.FindElement(By.Id("firstName")).SendKeys("Poojan");
         driver.FindElement(By.Id("address")).SendKeys("34 weber");
@@ -531,6 +614,8 @@ public class Assignment04Test
         driver.FindElement(By.Id("lastName-error")).Click();
         driver.FindElement(By.Id("lastName-error")).Click();
         {
+
+            //Assert
             var element = driver.FindElement(By.Id("lastName-error"));
             Actions builder = new Actions(driver);
             builder.DoubleClick(element).Perform();
