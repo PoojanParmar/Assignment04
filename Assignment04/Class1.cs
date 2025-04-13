@@ -82,6 +82,8 @@ public class Assignment04Test
             Assert.That(value, Is.EqualTo("No Insurance for you!!  Too many accidents - go take a course!"));
         }
     }
+
+
     [Test]
     public void insuraneQuote3()
     {
